@@ -23,13 +23,13 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry} % Modify margins
+\usepackage[top=1cm,left=0cm,right=1cm,bottom=1cm]{geometry} % Modify margins
 
 \usepackage{graphicx} % Required for figures
 
 \usepackage{flowfram} % Required for the multi-column layout
 
-\usepackage{url} % URLs
+\usepackage[hidelinks]{hyperref} % URLs
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for custom colours
 
@@ -86,10 +86,21 @@
 \SmallSep % Used for spacing
 }
 
+\newcommand{\CVSectionNoSep}[1]{ % New command for the headings within sections
+{\Large\textbf{#1}}\par
+% \SmallSep % Used for spacing
+}
+
 \newcommand{\CVItem}[2]{ % New command for the item descriptions
 \textbf{\color{RoyalBlue} #1}\par
 #2
 \SmallSep % Used for spacing
+}
+
+\newcommand{\CVItemNoSep}[2]{ % New command for the item descriptions
+\textbf{\color{RoyalBlue} #1}\par
+#2
+% \SmallSep % Used for spacing
 }
 
 \newcommand{\bluebullet}{\textcolor{RoyalBlue}{$\circ$}~~} % New command for the blue bullets
